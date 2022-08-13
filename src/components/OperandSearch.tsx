@@ -88,9 +88,7 @@ export const OperandSearch: React.FC<OperandSearchProps> = (
 
     if (response.ok) {
       const searchResponse = await response.json();
-      console.log(searchResponse);
       setResults(searchResponse);
-      // Find div elemebt called results and focus on it.
     }
   };
 
@@ -114,10 +112,6 @@ export const OperandSearch: React.FC<OperandSearchProps> = (
         body: JSON.stringify(feedbackRequest),
       }
     );
-
-    if (response.ok) {
-      console.log('Feedback logged');
-    }
   };
 
   return (
